@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: twitter-api-proxy
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+    plan: free
